@@ -616,11 +616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue_Text: {fileID: 1643235398}
   dialogue: "You\u2019re a newly graduated student trying to be employed in that
-    Bank of _, going for a trial job as a Loan Officer. Dream Ventures is a 2D simulation
-    game where you play as a loan agent making high-stakes decisions in which you
-    approve or deny client loan applications. But when the day ends, the real story
-    begins. Your dreams are tormented by the consequences of your decisions. Will
-    your conscience remain clear, or will your nightmares reveal a different story? "
+    Bank of _, going for a trial job as a Loan Officer. But when the day ends, the
+    real story begins. Your dreams are tormented by the consequences of your decisions.
+    Will your conscience remain clear, or will your nightmares reveal a different
+    story? "
   speed: 0.05
 --- !u!4 &1268991902
 Transform:
@@ -780,7 +779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: -25}
+  m_AnchoredPosition: {x: 37, y: -54}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2005406172
