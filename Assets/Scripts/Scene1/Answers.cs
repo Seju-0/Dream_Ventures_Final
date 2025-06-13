@@ -7,15 +7,7 @@ public class Answers : MonoBehaviour
     [SerializeField] private List<GameObject> Folder;
     public Dialogue dialogueScript;
     public string[] answers;
-
-    public void AskQuestion(int index)
-    {
-        if (index >= 0 && index < answers.Length)
-        {
-            dialogueScript.StartSingleLine(answers[index]);
-        }
-
-    }
+    public Client client;
 
     public void ApproveLoan(int index)
     {
@@ -27,8 +19,11 @@ public class Answers : MonoBehaviour
             {
                 component.SetActive(false);
             }
+
+            client.LeaveAfterDialogue();
         }
     }
+
     public void RejectLoan(int index)
     {
         if (index >= 0 && index < answers.Length)
@@ -39,6 +34,8 @@ public class Answers : MonoBehaviour
             {
                 component.SetActive(false);
             }
+
+            client.LeaveAfterDialogue();
         }
     }
 }

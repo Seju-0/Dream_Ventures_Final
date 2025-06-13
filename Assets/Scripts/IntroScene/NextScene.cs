@@ -7,6 +7,6 @@ public class NextScene : MonoBehaviour
 {
     public void LoadNextScene()
     {
-        SceneManager.LoadScene("GamePlay1");
+        SceneManager.LoadScene("Client1");
     }
 }

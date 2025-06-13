@@ -7,18 +7,6 @@ public class Folder : MonoBehaviour
     [SerializeField] private List<GameObject> Folder_Components;
     [SerializeField] private List<GameObject> Questions_Panel;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OpenFolder()
     {
         foreach (GameObject component in Folder_Components)

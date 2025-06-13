@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -17,6 +17,8 @@ public class Dialogue : MonoBehaviour
     private float lastClickTime = 0f;
     private float doubleClickThreshold = 0.3f;
 
+    public Action OnDialogueComplete;
+
     void Update()
     {
         if (Dialogue_Panel.activeSelf && Input.GetMouseButtonDown(0))
@@ -25,7 +27,6 @@ public class Dialogue : MonoBehaviour
 
             if (timeSinceLastClick <= doubleClickThreshold)
             {
-                // Double click: close dialogue immediately
                 Dialogue_Panel.SetActive(false);
                 Dialogue_Text.text = "";
                 isTyping = false;
@@ -33,6 +34,7 @@ public class Dialogue : MonoBehaviour
                 if (typingCoroutine != null)
                     StopCoroutine(typingCoroutine);
 
+                OnDialogueComplete?.Invoke();
                 return;
             }
 
@@ -54,6 +56,7 @@ public class Dialogue : MonoBehaviour
                 else
                 {
                     Dialogue_Panel.SetActive(false);
+                    OnDialogueComplete?.Invoke();
                 }
             }
         }
@@ -79,11 +82,12 @@ public class Dialogue : MonoBehaviour
 
         isTyping = false;
     }
+
     public void StartSingleLine(string line)
     {
         Dialogue_Panel.SetActive(true);
         currentLineIndex = 0;
-        DialogueLines = new string[] { line }; 
+        DialogueLines = new string[] { line };
         typingCoroutine = StartCoroutine(TypeLine(DialogueLines[0]));
     }
 }
