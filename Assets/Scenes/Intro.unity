@@ -616,10 +616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue_Text: {fileID: 1643235398}
   dialogue: "You\u2019re a newly graduated student trying to be employed in that
-    Bank of _, going for a trial job as a Loan Officer. But when the day ends, the
-    real story begins. Your dreams are tormented by the consequences of your decisions.
-    Will your conscience remain clear, or will your nightmares reveal a different
-    story? "
+    Bank of Dream Ventures Inc, going for a trial job as a Loan Officer. But when
+    the day ends, the real story begins. Your dreams are tormented by the consequences
+    of your decisions. Will your conscience remain clear, or will your nightmares
+    reveal a different story? "
   speed: 0.05
 --- !u!4 &1268991902
 Transform:
